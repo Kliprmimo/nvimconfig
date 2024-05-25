@@ -23,7 +23,17 @@ return {
 		local lspconfig = require('lspconfig')
 		lspconfig.lua_ls.setup({})
 		lspconfig.clangd.setup({})
-		lspconfig.pylsp.setup({})
+		lspconfig.pylsp.setup({
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = { "E501" },
+        },
+      },
+    },
+  },
+})
 		vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 		end
 	}
