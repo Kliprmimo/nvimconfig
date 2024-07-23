@@ -16,4 +16,4 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup("plugins")
-
+vim.o.undofile = true
