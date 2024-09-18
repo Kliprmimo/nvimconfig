@@ -5,6 +5,9 @@ vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle)
 
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 
+vim.keymap.set("n", "<Enter>", "o<ESC>")
+vim.keymap.set("n", "<S-Enter>", "O<ESC>")
+
 -- Keybinding to toggle inline diagnostics (ii)
 vim.api.nvim_set_keymap('n', '<Leader>ii', ':lua vim.cmd("DiagnosticsToggleVirtualText")<CR>',
 	{ noremap = true, silent = true })
