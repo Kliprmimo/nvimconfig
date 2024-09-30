@@ -17,3 +17,5 @@ vim.api.nvim_set_keymap('n', '<Leader>id', ':lua vim.cmd("DiagnosticsToggle")<CR
 
 vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton scramble<CR>")
 vim.keymap.set("n", "<leader>gol", "<cmd>CellularAutomaton game_of_life<CR>")
+
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
