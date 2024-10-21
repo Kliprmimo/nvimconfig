@@ -14,8 +14,8 @@ return {
 	},
 	'nvim-treesitter/nvim-treesitter',
 	'nvim-treesitter/playground',
-	'theprimeagen/harpoon',
+	'ThePrimeagen/harpoon',
 	'mbbill/undotree',
 	'tpope/vim-fugitive',
-	'eandrju/cellular-automaton.nvim' 
+	'eandrju/cellular-automaton.nvim'
 }
