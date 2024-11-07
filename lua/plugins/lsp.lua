@@ -10,9 +10,12 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls",
+				ensure_installed = {
+					"lua_ls",
 					"clangd",
-					"pylsp"
+					"pylsp",
+					"gopls",
+					"templ"
 				}
 			})
 		end
@@ -23,6 +26,8 @@ return {
 			local lspconfig = require('lspconfig')
 			lspconfig.lua_ls.setup({ settings = { diagnostics = { globals = { "vim" } } } })
 			lspconfig.clangd.setup({})
+			lspconfig.gopls.setup({})
+			lspconfig.templ.setup({})
 			lspconfig.pylsp.setup({
 				settings = {
 					pylsp = {
