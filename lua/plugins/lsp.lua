@@ -32,6 +32,7 @@ return {
 				settings = {
 					pylsp = {
 						plugins = {
+							pyflakes = { enabled = false },
 							pycodestyle = {
 								ignore = { "E501" },
 							},
@@ -40,7 +41,6 @@ return {
 				},
 			})
 			vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-			vim.keymap.set('i', 'C-k', vim.lsp.buf.hover, {})
 		end
 	}
 
