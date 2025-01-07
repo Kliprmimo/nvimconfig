@@ -15,7 +15,8 @@ return {
 					"clangd",
 					"pylsp",
 					"gopls",
-					"templ"
+					"templ",
+					"htmx"
 				}
 			})
 		end
@@ -27,6 +28,7 @@ return {
 			lspconfig.lua_ls.setup({ settings = { diagnostics = { globals = { "vim" } } } })
 			lspconfig.clangd.setup({})
 			lspconfig.gopls.setup({})
+			lspconfig.htmx.setup({})
 			lspconfig.templ.setup({})
 			lspconfig.pylsp.setup({
 				settings = {
