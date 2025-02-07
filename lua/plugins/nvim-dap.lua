@@ -20,21 +20,21 @@ return {
       dap_python.setup("python3")
 
       vim.fn.sign_define("DapBreakpoint", {
-        text = "*",
+        text = "",
         texthl = "DiagnosticSignError",
         linehl = "",
         numhl = "",
       })
 
       vim.fn.sign_define("DapBreakpointRejected", {
-        text = "❌",
+        text = "", -- or "❌"
         texthl = "DiagnosticSignError",
         linehl = "",
         numhl = "",
       })
 
       vim.fn.sign_define("DapStopped", {
-        text = "→",
+        text = "", -- or "→"
         texthl = "DiagnosticSignWarn",
         linehl = "Visual",
         numhl = "DiagnosticSignWarn",
@@ -71,7 +71,7 @@ return {
       vim.keymap.set("n", "<leader>dO", function()
         dap.step_out()
       end, opts)
-
+			
       -- Keymap to terminate debugging
 	  vim.keymap.set("n", "<leader>dq", function()
 	      require("dap").terminate()
