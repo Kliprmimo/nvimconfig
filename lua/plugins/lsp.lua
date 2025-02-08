@@ -34,15 +34,20 @@ return {
 				settings = {
 					pylsp = {
 						plugins = {
-							pyflakes = { enabled = false },
-							pycodestyle = {
-								ignore = { "E501" },
-							},
+							pyflakes = { enabled = true },     -- Linter for Python errors
+							pycodestyle = { enabled = true, ignore = { "E501" } }, -- Code style warnings
+							mccabe = { enabled = true },       -- Complexity warnings
 						},
 					},
 				},
 			})
 			vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+			vim.diagnostic.config({
+				virtual_text = true, -- Shows inline errors
+				signs = true,
+				underline = true,
+				update_in_insert = true, -- Change to true if you want live updates
+			})
 		end
 	}
 

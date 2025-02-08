@@ -8,7 +8,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "autopep8" },
-				c = { "clang-format" },
+				c = { "clang_format" },
 				svelte = { { "prettierd", "prettier" } },
 				javascript = { { "prettierd", "prettier" } },
 				typescript = { { "prettierd", "prettier" } },
@@ -30,6 +30,12 @@ return {
 				css = { { "prettierd", "prettier" } },
 				scss = { { "prettierd", "prettier" } },
 				sh = { { "shellcheck" } },
+			},
+			formatters = {
+				clang_format = {
+					command = "clang-format",
+					args = { "--style=file:/home/anon/.clang-format" },
+				},
 			},
 		})
 
