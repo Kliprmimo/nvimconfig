@@ -34,9 +34,10 @@ return {
 				settings = {
 					pylsp = {
 						plugins = {
-							pyflakes = { enabled = true },     -- Linter for Python errors
+							pyflakes = { enabled = false },               -- Disable pyflakes
+							flake8 = { enabled = true, ignore = { "F403", "F405" } }, -- Use flake8 with ignored rules
 							pycodestyle = { enabled = true, ignore = { "E501" } }, -- Code style warnings
-							mccabe = { enabled = true },       -- Complexity warnings
+							mccabe = { enabled = true },                  -- Complexity warnings
 						},
 					},
 				},
