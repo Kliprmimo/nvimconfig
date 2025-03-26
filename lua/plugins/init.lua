@@ -12,9 +12,13 @@ return {
 			vim.cmd('colorscheme rose-pine')
 		end
 	},
+	 {
+	"ThePrimeagen/harpoon",
+	branch = "harpoon2",
+	dependencies = { "nvim-lua/plenary.nvim" }
+},
 	'nvim-treesitter/nvim-treesitter',
 	'nvim-treesitter/playground',
-	'ThePrimeagen/harpoon',
 	'mbbill/undotree',
 	'tpope/vim-fugitive',
 	'eandrju/cellular-automaton.nvim'
